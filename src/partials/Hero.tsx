@@ -1,64 +1,50 @@
-import {
-  GradientText,
-  HeroAvatar,
-  HeroSocial,
-  Section,
-} from 'astro-boilerplate-components';
+import { GradientText } from '@/components/GradientText';
+import { HeroAvatar } from '@/components/HeroAvatar';
+import { HeroSocial } from '@/components/HeroSocial';
+import { Section } from '@/components/Section';
 
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi there, I'm <GradientText>Henry</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
-          </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
-          </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          I'm a{' '}
+          <b>
+            <GradientText>developer</GradientText>
+          </b>{' '}
+          based in Lima, Peru. I enjoy automating tasks, creating digital
+          products like web or desktop desktop applications, developing scraping
+          bots and more.
         </>
       }
+      languages="Java, Python, PHP, Javascript."
+      frameworks="Spring, Flask, Laravel, Angular, NextJs, Tailwind CSS."
       avatar={
         <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
+          className="h-60 w-60"
+          src="\assets\images\carita.png"
           alt="Avatar image"
           loading="lazy"
         />
       }
       socialButtons={
         <>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/twitter-icon.png"
-              alt="Twitter icon"
-            />
+          <a href="https://twitter.com/navichicken">
+            <HeroSocial src="/assets/images/twitter.png" alt="Twitter icon" />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/facebook-icon.png"
-              alt="Facebook icon"
-            />
+          <a href="https://www.linkedin.com/in/henry-aliaga/">
+            <HeroSocial src="/assets/images/linkedin.png" alt="Linkedin icon" />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/linkedin-icon.png"
-              alt="Linkedin icon"
-            />
+          <a href="https://github.com/navi-guy">
+            <HeroSocial src="/assets/images/github.png" alt="Github icon" />
           </a>
-          <a href="/">
-            <HeroSocial
-              src="/assets/images/youtube-icon.png"
-              alt="Youtube icon"
-            />
+          <a href="mailto:henry.aliaga@outlook.es">
+            <HeroSocial src="/assets/images/correo.png" alt="Email icon" />
           </a>
         </>
       }
