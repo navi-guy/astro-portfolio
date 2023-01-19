@@ -5,7 +5,6 @@ import {
   NavMenuItem,
   Section,
 } from 'astro-boilerplate-components';
-import logo from 'public\\assets\\images\\logo.png';
 
 const Navbar = () => (
   <Section>
@@ -16,7 +15,7 @@ const Navbar = () => (
             <img
               width={50}
               height={50}
-              src={logo}
+              src="/assets/images/logo.png"
               style={{ marginRight: '10px' }}
               alt="Logo"
             />

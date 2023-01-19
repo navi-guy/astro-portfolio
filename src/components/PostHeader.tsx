@@ -1,6 +1,5 @@
+import type { IFrontmatter } from 'astro-boilerplate-components';
 import { format } from 'date-fns';
-
-import type { IFrontmatter } from '../types/IFrontMatter';
 
 type IPostHeaderProps = {
   content: IFrontmatter;
