@@ -25,8 +25,8 @@ const Navbar = () => (
       </a>
 
       <NavMenu>
-        {/* <NavMenuItem href="/posts">Blogs</NavMenuItem> */}
-        <NavMenuItem href="/#">Contact</NavMenuItem>
+        <NavMenuItem href="/posts">Posts</NavMenuItem>
+        {/* <NavMenuItem href="/#">Contact</NavMenuItem> */}
         {/* <NavMenuItem href="https://github.com/navi-guy">GitHub</NavMenuItem> */}
         {/* <NavMenuItem href="/">Twitter</NavMenuItem> */}
       </NavMenu>
