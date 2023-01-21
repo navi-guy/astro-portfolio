@@ -1,0 +1,59 @@
+---
+import type {
+  FrontmatterPage,
+  IFrontmatter,
+} from 'astro-boilerplate-components';
+import { PaginationHeader, Section } from 'astro-boilerplate-components';
+
+import Base from '@/templates/Base.astro';
+import { sortByDate } from '@/utils/Posts';
+
+type GetStaticPaths = {
+  paginate: any;
+}; // Overrides `GetStaticPathsOptions` types from Astro
+
+export async function getStaticPaths({ paginate }: GetStaticPaths) {
+  const allPosts = await Astro.glob<IFrontmatter>('./*.md');
+  const sortedPosts = sortByDate(allPosts);
+
+  // Return a paginated collection of paths for all posts
+  return paginate(sortedPosts, { pageSize: 6 });
+}
+
+interface Props {
+  page: FrontmatterPage;
+}
+
+const { page } = Astro.props as Props;
+const titleSuffix = ` - Summer Puzzle`;
+const titleBase = `Licy`;
+const title = titleBase + titleSuffix;
+const description = 'Licy puzzle';
+---
+
+<Base head={{ title, description }}>
+  <Section>
+    <PaginationHeader
+      title='Summer Puzzle'
+      description='🏝 Bienvenida al puzzle del verano 🏝'
+    />
+  </Section>
+  <Section>
+    <!-- <div class='content-center'>
+     
+    </div> -->
+    <div class='flex flex-col'>
+      <img
+        src='/assets/images/grua.png'
+        alt='Web in Construction'
+        class='m-auto block w-1/2'
+      />
+    </div>
+    <div class='grid content-center'>
+      <h1 class='mx-auto max-w-screen-lg px-3 py-6 !text-3xl !text-orange-400'>
+        Puzzle on construction - Please wait miau 🐱‍👓
+      </h1>
+    </div>
+    <!-- <BlogGallery postList={page.data} /> -->
+  </Section>
+</Base>
