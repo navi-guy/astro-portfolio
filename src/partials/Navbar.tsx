@@ -1,9 +1,7 @@
-import {
-  Logo,
-  NavbarTwoColumns,
-  NavMenu,
-  Section,
-} from 'astro-boilerplate-components';
+import { Logo } from '@/components/Logo';
+import { NavbarTwoColumns } from '@/components/NavbarTwoColumns';
+import { NavMenu } from '@/components/NavMenu';
+import { Section } from '@/components/Section';
 
 const Navbar = () => (
   <Section>
